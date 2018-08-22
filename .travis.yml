@@ -1,18 +1,8 @@
 language: generic
 before_install:
-    - chmod +x ./scripts/changefile.sh
-    - chmod +x ./scripts/deploy.sh
+    - chmod +x ./scripts/add-changelog.sh
+    - chmod +x ./scripts/push.sh
 script:
-    - ./scripts/changefile.sh
-before_deploy:
-    - ./scripts/deploy.sh
-deploy:
-    skip-cleanup: true
-    api_key:
-        secure: ${GH_TOKEN}
-    file:
-        - "data/changelog.txt"
-    on:
-        repo: ThePoptartCrpr/travis-test
-        tags: false
-        branch: master
+    - ./scripts/add-changelog.sh
+after_success:
+    - ./scripts/push.sh
