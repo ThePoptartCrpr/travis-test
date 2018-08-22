@@ -3,5 +3,14 @@ before_install:
     - chmod +x ./scripts/changefile.sh
 script:
     - ./scripts/changefile.sh
-deploy:
+before_deploy:
     - ./scripts/deploy.sh
+deploy:
+    api_key:
+        secure: ${GH_TOKEN}
+    file:
+        - "changelog.txt"
+    on:
+        repo: ThePoptartCrpr/travis-test
+        tags: false
+        all_branches: true
