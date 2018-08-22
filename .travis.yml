@@ -6,11 +6,12 @@ script:
 before_deploy:
     - ./scripts/deploy.sh
 deploy:
+    skip-cleanup: true
     api_key:
         secure: ${GH_TOKEN}
     file:
-        - "changelog.txt"
+        - "data/changelog.txt"
     on:
         repo: ThePoptartCrpr/travis-test
         tags: false
-        all_branches: true
+        branch: master
