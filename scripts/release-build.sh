@@ -10,6 +10,10 @@ export TITLEVERSION="Aeroteam-v${VERSION}"
 echo "${VERSION}"
 echo $PWD
 
-zip "${TITLEVERSION}.zip" ../*
+cd $HOME
+
+echo $PWD
+
+zip "${TITLEVERSION}.zip" ${TRAVIS_BUILD_DIR}/*
 
 git tag ${TITLEVERSION}
