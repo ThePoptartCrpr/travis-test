@@ -4,4 +4,4 @@ before_install:
 script:
     - ./scripts/changefile.sh
 deploy:
-    # nothing
+    - ./scripts/deploy.sh
