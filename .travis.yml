@@ -2,6 +2,6 @@ language: generic
 before_install:
     - chmod +x ./scripts/release-build.sh
 script:
-    if [[ $TRAVIS_COMMIT_MESSAGE == *"--release-pack"* ]];
+    if [[ $TRAVIS_COMMIT_MESSAGE == *"release-pack" ]];
     then /bin/bash ./scripts/release-build.sh;
     fi;
