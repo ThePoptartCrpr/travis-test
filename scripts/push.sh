@@ -17,6 +17,9 @@
 
 git config --global user.email "${GIT_EMAIL}"
 git config --global user.name "${GIT_NAME}"
-git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+# git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
+git remote set-url origin https://${GIT_NAME}:${GH_TOKEN}@github.com/${GIT_NAME}/${TRAVIS_REPO_SLUG}.git
 
-git push --quiet origin master
+git push origin master
+
+echo "Pushed to repository."
