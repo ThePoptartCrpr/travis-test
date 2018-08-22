@@ -11,4 +11,4 @@ echo "${VERSION}"
 
 zip "Aeroteam-v${VERSION}.zip" ../*
 
-git tag ${VERSION}
+git tag ${TITLEVERSION}
