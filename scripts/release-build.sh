@@ -8,7 +8,8 @@ MCVERSION=`sed '2q;d' data/data.txt`
 export TITLEVERSION="Aeroteam-v${VERSION}"
 
 echo "${VERSION}"
+echo $PWD
 
-zip "Aeroteam-v${VERSION}.zip" ../*
+zip "${TITLEVERSION}.zip" ../*
 
 git tag ${TITLEVERSION}
