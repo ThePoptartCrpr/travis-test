@@ -6,6 +6,6 @@ TITLEVERSION="Aeroteam-v${VERSION}"
 
 echo "${VERSION}"
 
-mkdir ${TITLEVERSION}/*
+mkdir ${TITLEVERSION}
 
 mv ../* ${TITLEVERSION}/*
