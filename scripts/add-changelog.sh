@@ -6,7 +6,7 @@ git config --global push.default simple
 msg="- $TRAVIS_BUILD_NUMBER: $TRAVIS_COMMIT_MESSAGE ($AUTHOR_NAME)"
 echo "$msg" >> data/changelog.txt
 
-echo "$(<data/changelog.txt)"
+sed '2q;d' data/data.txt
 
 git add data/changelog.txt
-git commit -m "Update changelog with $TRAVIS_BUILD_NUMBER [skip ci]"
+git commit -m "Update changelog [skip ci]"
