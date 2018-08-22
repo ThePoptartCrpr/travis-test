@@ -1,0 +1,5 @@
+language: generic
+script:
+    # nothing
+deploy:
+    # nothing
