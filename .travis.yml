@@ -2,6 +2,7 @@ language: generic
 before_install:
     - chmod +x ./scripts/add-changelog.sh
     - chmod +x ./scripts/push.sh
+    - export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
 script:
     - ./scripts/add-changelog.sh
 after_success:
