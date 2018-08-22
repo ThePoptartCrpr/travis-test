@@ -1,6 +1,7 @@
 language: generic
 before_install:
     - chmod +x ./scripts/changefile.sh
+    - chmod +x ./scripts/deploy.sh
 script:
     - ./scripts/changefile.sh
 before_deploy:
