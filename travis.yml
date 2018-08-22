@@ -1,5 +1,5 @@
 language: generic
 script:
-    ./changefile.sh
+    - ./changefile.sh
 deploy:
     # nothing
